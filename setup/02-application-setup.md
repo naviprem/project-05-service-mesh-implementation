@@ -54,8 +54,8 @@ docker run -d -p 3002:3002 \
 curl http://localhost:3002/health
 curl -X POST -H "Content-Type: application/json" \
   -d '{"product_id": 1, "quantity": 2}' \
-  http://localhost:3002/cart/user1
-curl http://localhost:3002/cart/user1
+  http://localhost:3002/cart/1
+curl http://localhost:3002/cart/1
 
 ```
 

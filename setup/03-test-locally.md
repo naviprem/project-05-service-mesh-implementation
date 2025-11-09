@@ -19,6 +19,14 @@ minikube dashboard
 
 # Enable registry addon to push images - Optional
 minikube addons enable registry
+minikube addons enable metrics-server
+
+# Check if metrics-server is running
+kubectl get pods -n kube-system | grep metrics-server
+
+# Check all pods
+kubectl top pods -n ecommerce
+
 # for this project, you don't need to push to a registry. You can use Minikube's Docker daemon directly:
 # Use minikube's docker daemon
 eval $(minikube docker-env)
